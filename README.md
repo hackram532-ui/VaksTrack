@@ -1,81 +1,90 @@
-🛡️ VaksTrack
+# 🛡️ VaksTrack
 
-**VaksTrack** is a secure, beginner-friendly, full-stack **Vaccination Management System** designed to manage anonymized vaccination records, track public health metrics, simulate outbreaks, and integrate with official Indian government APIs.
+**VaksTrack** is a secure, beginner-friendly, full-stack **Vaccination Management System** built to track and manage vaccination records, visualize public health data, simulate outbreaks, and integrate with official Indian government health APIs.
 
-> 💡 This project was created as a hackathon submission by a developer known for perfection in code quality and functionality.
+> 💡 Created as a hackathon submission by a developer known for precision, performance, and bug-free code.
 
 ---
-✨ Features
 
-- 🧑‍⚕️ **Add and Manage Individuals**  
-  - Assign age-based vaccine schedules  
-  - Track pending, upcoming, and completed vaccinations
+## ✨ Key Features
 
-- 📊 **Statistics & Graphs**  
-  - Coverage rates per city or demographic  
-  - Built with dynamic charts
+### 🧑‍⚕️ Individual Management
+- Add individuals with personal details and age
+- Assign automatic, age-based vaccine schedules
+- View pending, completed, and upcoming vaccinations
 
-- 🧬 **Infection Tracking**  
-  - Visualize infection rates by location  
-  - Fetch real-time case data from official **Indian Govt APIs**
+### 📊 Statistics & Graphs
+- Coverage rates by location or demographic
+- Dynamic charts showing vaccine distribution and trends
 
-- 📅 **Vaccination Scheduling**  
-  - Automated schedule based on age and vaccine type  
-  - Supports multiple vaccines: COVID-19, Polio, Hepatitis, etc.
+### 🧬 Infection Tracking
+- Visualize infection and outbreak rates by location
+- Integrates with **Indian Government APIs** for live data
 
-- 🔔 **Reminders & Alerts**  
-  - Automated notifications for due vaccines  
-  - Outbreak risk simulations based on low coverage
+### 📅 Vaccination Scheduling
+- Automatically generated schedules based on age and vaccine type
+- Supports multiple vaccines (COVID-19, Polio, Hepatitis, etc.)
 
-- 🧾 **Manual Data Entry**  
-  - Add anonymous or user-based vaccine data  
-  - Record demographics, location, and disease type
+### 🔔 Reminders & Alerts
+- Sends reminders for due or missed vaccines
+- Simulates outbreak risk in low-coverage areas
 
-- 👤 **User Profile Management**  
-  - Profile access via sidebar  
-  - Update personal or vaccination info securely
+### 🧾 Manual Data Entry
+- Add anonymized vaccination data
+- Enter location, demographic, and disease info
+
+### 👤 User Profile Management
+- Secure user profile section
+- Update personal and vaccination details
+- Accessible via sidebar navigation
 
 ---
 
 ## 🧰 Tech Stack
 
-| Layer       | Tech                              |
-|-------------|-----------------------------------|
-| Frontend    | React + TypeScript + TailwindCSS  |
-| Backend     | Supabase (Auth + DB)              |
-| APIs        | Government of India COVID API     |
-| Deployment  | Vercel                            |
+| Layer     | Tech                             |
+|-----------|----------------------------------|
+| Frontend  | React + TypeScript + TailwindCSS |
+| Backend   | Supabase (Auth + PostgreSQL DB)  |
+| APIs      | Govt. of India COVID APIs        |
+| Hosting   | Vercel                           |
 
 ---
 
 ## ⚙️ Local Development Setup
 
-### 🛠️ Requirements
-
-- npm
-- Supabase Project with URL & Anon Key
-- `.env.local` file
+### 🛠 Requirements
+- Node.js (v16+)
+- npm or yarn
+- Git
+- Supabase account & project
 
 ---
 
-### 🚀 Steps to Run Locally
+### 📦 Installation Steps
 
-Bash:
-# 1. Clone the repo
+#### 1. Clone the Repository
+
+```bash
 git clone https://github.com/hackram532-ui/VaksTrack.git
 cd VaksTrack
-
-# 2. Install dependencies
 npm install
+# or
+yarn install
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+npm run dev
+# or
+yarn dev
 
-# 3. Add environment variables
-cp .env.example .env.local
+Visit: http://localhost:3000
 
-Structure:
-src/
-├── components/        # Reusable UI
-├── pages/             # Main app routes
-├── api/               # API integrations
-├── lib/               # Supabase client
-├── utils/             # Helper functions
-├── App.tsx            # App root
+🌐 API Integration
+Real-time COVID-19 and infection data pulled from:
+
+https://data.covid19india.org (or official APIs)
+
+Stored securely using .env.local
+
+Sanjay Ram R and teammates – Frontend & Backend Dev | UI/UX Lover | Hackathon Builder
+GitHub: @hackram532-ui
